@@ -1,9 +1,9 @@
 <?php
 // Since we're already using PHP5, why don't we exploit their easy to 
 use file_get_contents() command?
-$filename = "/home/nconsolo/input.nessus";
+$filename = "/path/to/input.nessus";
 if (filesize($filename) > 0) {
-$xmlFileData = file_get_contents("/home/nconsolo/input.nessus");
+$xmlFileData = file_get_contents("/path/to/input.nessus");
 //Here's our Simple XML parser!
 $xmlData = new SimpleXMLElement($xmlFileData);
 //And here's the output.
@@ -196,10 +196,10 @@ $item->attributes()->pluginFamily);
   }
 
 
-// Now that we have the information we need in 4 different arrays based 
+/* Now that we have the information we need in 4 different arrays based 
 on criticality, let's add everything to the database
 
-/*
+
 
 Database architecture:
 
